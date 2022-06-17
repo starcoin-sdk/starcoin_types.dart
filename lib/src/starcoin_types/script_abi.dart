@@ -8,8 +8,8 @@ abstract class ScriptABI {
   static ScriptABI deserialize(BinaryDeserializer deserializer) {
     int index = deserializer.deserializeVariantIndex();
     switch (index) {
-      case 0: return ScriptAbiTransactionScriptItem.load(deserializer);
-      case 1: return ScriptAbiScriptFunctionItem.load(deserializer);
+      // case 0: return ScriptAbiTransactionScriptItem.load(deserializer);
+      // case 1: return ScriptAbiScriptFunctionItem.load(deserializer);
       default: throw Exception("Unknown variant index for ScriptABI: " + index.toString());
     }
   }
